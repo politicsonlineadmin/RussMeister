@@ -761,9 +761,19 @@ export default function SessionScreen({
                     {productionPrompt.writing.vocabulary_to_use.map((w) => (
                       <span
                         key={w}
-                        className="text-xs px-3 py-1 rounded-lg bg-[#e58300]/10 text-[#e58300] font-mono font-semibold border border-[#e58300]/20"
+                        className="text-xs px-3 py-1 rounded-lg bg-[#e58300]/10 text-[#e58300] font-mono font-semibold border border-[#e58300]/20 inline-flex items-center gap-1.5"
                       >
                         {w}
+                        <button
+                          type="button"
+                          onClick={() => speak(w, profile.assessed_level)}
+                          className="w-5 h-5 rounded-full bg-[#e58300] hover:bg-[#cc7400] text-white flex items-center justify-center cursor-pointer transition-colors"
+                          aria-label={`Play: ${w}`}
+                        >
+                          <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                            <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5" />
+                          </svg>
+                        </button>
                       </span>
                     ))}
                   </div>

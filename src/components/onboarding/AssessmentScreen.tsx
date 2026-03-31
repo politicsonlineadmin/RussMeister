@@ -3,6 +3,7 @@
 import { useState, useCallback, useRef, useEffect } from 'react';
 import type { LearnerProfile, CEFRLevel, SkillBreakdown, SkillType } from '@/types';
 import { CEFR_ORDER } from '@/types';
+import AudioButton from '@/components/ui/AudioButton';
 
 // ─── Types ────────────────────────────────────────────────────
 interface AssessmentScreenProps {
@@ -411,6 +412,10 @@ export default function AssessmentScreen({ profile, onComplete }: AssessmentScre
       className="px-6 max-w-lg mx-auto animate-fadeIn"
     >
       <div className="bg-white border border-gray-200 rounded-2xl p-5 mb-6 shadow-sm">
+        <div className="flex items-start gap-3 mb-3">
+          <AudioButton text={READING_PASSAGE} level={profile.assessed_level} />
+          <span className="text-xs text-[#3d6b6b]/50 self-center">Listen to the passage</span>
+        </div>
         <p className="text-[#3d6b6b]/80 leading-relaxed text-[15px] whitespace-pre-wrap">{READING_PASSAGE}</p>
       </div>
 
@@ -497,16 +502,19 @@ export default function AssessmentScreen({ profile, onComplete }: AssessmentScre
 
         <div key={questionIndex} className="animate-fadeIn">
           <div className="bg-white border border-gray-200 rounded-2xl p-5 mb-6 shadow-sm">
-            <p className="text-xl text-[#3d6b6b] font-medium text-center">
-              {q.sentence.split('___').map((part, i, arr) => (
-                <span key={i}>
-                  {part}
-                  {i < arr.length - 1 && (
-                    <span className="inline-block w-20 border-b-2 border-[#e58300]/60 mx-1" />
-                  )}
-                </span>
-              ))}
-            </p>
+            <div className="flex items-center justify-center gap-3">
+              <p className="text-xl text-[#3d6b6b] font-medium text-center">
+                {q.sentence.split('___').map((part, i, arr) => (
+                  <span key={i}>
+                    {part}
+                    {i < arr.length - 1 && (
+                      <span className="inline-block w-20 border-b-2 border-[#e58300]/60 mx-1" />
+                    )}
+                  </span>
+                ))}
+              </p>
+              <AudioButton text={q.sentence.replace('___', q.correctAnswer)} level={profile.assessed_level} />
+            </div>
           </div>
 
           <div className="grid grid-cols-2 gap-3">
@@ -553,7 +561,10 @@ export default function AssessmentScreen({ profile, onComplete }: AssessmentScre
         <div key={questionIndex} className="animate-fadeIn">
           <div className="bg-white border border-gray-200 rounded-2xl p-6 mb-6 text-center shadow-sm">
             <p className="text-xs text-[#3d6b6b]/50 uppercase tracking-wider mb-2">Translate to English</p>
-            <p className="text-3xl font-bold text-[#e58300]">{q.russian}</p>
+            <div className="flex items-center justify-center gap-3">
+              <p className="text-3xl font-bold text-[#e58300]">{q.russian}</p>
+              <AudioButton text={q.russian} level={profile.assessed_level} />
+            </div>
           </div>
 
           <div className="grid grid-cols-2 gap-3">

@@ -810,6 +810,7 @@ export default function AlphabetScreen({ onComplete }: AlphabetScreenProps) {
                         {(masteryQuestions[masteryIdx].item as CyrillicLetter).lower}
                       </span>
                     </div>
+                    <SmallAudioButton text={(masteryQuestions[masteryIdx].item as CyrillicLetter).lower} size="sm" />
                   </div>
                 </>
               ) : (

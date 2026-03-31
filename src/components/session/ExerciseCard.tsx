@@ -267,9 +267,11 @@ function VocabQuiz({
 // ─── Fill in the Blank ───────────────────────────────────────
 
 function FillBlank({
+  exercise,
   content,
   onAnswer,
 }: {
+  exercise: Exercise;
   content: FillBlankContent;
   onAnswer: (answer: string, correct: boolean) => void;
 }) {
@@ -293,9 +295,10 @@ function FillBlank({
     <div>
       {/* Sentence with highlighted blank */}
       <div className="rounded-xl bg-[#f8ffff] border border-[#e7f5f5] px-6 py-5 mb-6">
-        <p className="text-xl sm:text-2xl text-[#3d6b6b] font-mono leading-relaxed">
-          {parts[0]}
-          <motion.span
+        <div className="flex items-center gap-3">
+          <p className="text-xl sm:text-2xl text-[#3d6b6b] font-mono leading-relaxed flex-1">
+            {parts[0]}
+            <motion.span
             animate={
               answered
                 ? {}
@@ -321,7 +324,9 @@ function FillBlank({
             {selected ?? '___'}
           </motion.span>
           {parts[1]}
-        </p>
+          </p>
+          <AudioButton text={content.sentence.replace('___', content.correct_answer)} level={exercise.level} />
+        </div>
       </div>
 
       {/* Option pills */}
@@ -361,6 +366,11 @@ function FillBlank({
             >
               <span>{option}</span>
               {icon}
+              {!answered && (
+                <span onClick={(e) => e.stopPropagation()} className="inline-flex">
+                  <AudioButton text={option} level={exercise.level} />
+                </span>
+              )}
             </motion.button>
           );
         })}
@@ -381,9 +391,11 @@ function FillBlank({
 // ─── Sentence Build ──────────────────────────────────────────
 
 function SentenceBuild({
+  exercise,
   content,
   onAnswer,
 }: {
+  exercise: Exercise;
   content: SentenceBuildContent;
   onAnswer: (answer: string, correct: boolean) => void;
 }) {
@@ -476,6 +488,14 @@ function SentenceBuild({
         </Button>
       )}
 
+      {/* Audio for the correct sentence (shown after answering) */}
+      {answered && (
+        <div className="flex items-center gap-3 mt-4">
+          <span className="text-xs text-[#3d6b6b]/70 font-medium">Listen to correct sentence:</span>
+          <AudioButton text={content.correct_order} level={exercise.level} />
+        </div>
+      )}
+
       <AnimatePresence>
         {answered && (
           <FeedbackOverlay
@@ -491,9 +511,11 @@ function SentenceBuild({
 // ─── Translation ─────────────────────────────────────────────
 
 function Translation({
+  exercise,
   content,
   onAnswer,
 }: {
+  exercise: Exercise;
   content: TranslationContent;
   onAnswer: (answer: string, correct: boolean) => void;
 }) {
@@ -529,9 +551,14 @@ function Translation({
             </div>
           )}
         </div>
-        <p className="text-xl sm:text-2xl text-[#3d6b6b] font-medium leading-relaxed">
-          {content.source}
-        </p>
+        <div className="flex items-center gap-3">
+          <p className="text-xl sm:text-2xl text-[#3d6b6b] font-medium leading-relaxed flex-1">
+            {content.source}
+          </p>
+          {content.source_language === 'ru' && (
+            <AudioButton text={content.source} level={exercise.level} />
+          )}
+        </div>
       </div>
 
       {/* Translation input */}
@@ -580,6 +607,19 @@ function Translation({
         </Button>
       )}
 
+      {/* Audio for the correct Russian text after answering */}
+      {answered && (
+        <div className="flex items-center gap-3 mt-4">
+          <span className="text-xs text-[#3d6b6b]/70 font-medium">
+            {content.source_language === 'en' ? 'Hear the Russian:' : 'Hear the sentence:'}
+          </span>
+          <AudioButton
+            text={content.source_language === 'en' ? content.correct_translation : content.source}
+            level={exercise.level}
+          />
+        </div>
+      )}
+
       <AnimatePresence>
         {answered && (
           <FeedbackOverlay
@@ -611,15 +651,15 @@ export default function ExerciseCard({ exercise, onAnswer }: ExerciseCardProps) 
       }
       case 'fill_blank': {
         const content = exercise.content as FillBlankContent;
-        return <FillBlank content={content} onAnswer={onAnswer} />;
+        return <FillBlank exercise={exercise} content={content} onAnswer={onAnswer} />;
       }
       case 'sentence_build': {
         const content = exercise.content as SentenceBuildContent;
-        return <SentenceBuild content={content} onAnswer={onAnswer} />;
+        return <SentenceBuild exercise={exercise} content={content} onAnswer={onAnswer} />;
       }
       case 'translation': {
         const content = exercise.content as TranslationContent;
-        return <Translation content={content} onAnswer={onAnswer} />;
+        return <Translation exercise={exercise} content={content} onAnswer={onAnswer} />;
       }
       default:
         return (
