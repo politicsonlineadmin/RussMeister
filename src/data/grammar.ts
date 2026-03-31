@@ -6,7 +6,7 @@ export interface GrammarTopicData {
   level: CEFRLevel;
   description: string;
   explanation: string;
-  examples: { german: string; english: string; highlight: string }[];
+  examples: { russian: string; english: string; highlight: string }[];
 }
 
 export const GRAMMAR_CURRICULUM: Record<CEFRLevel, GrammarTopicData[]> = {
@@ -20,17 +20,17 @@ export const GRAMMAR_CURRICULUM: Record<CEFRLevel, GrammarTopicData[]> = {
         'Russian verbs in the present tense belong to one of two conjugation groups. First conjugation verbs (e.g. читать) take endings -ю, -ешь, -ет, -ем, -ете, -ют. Second conjugation verbs (e.g. говорить) take -ю, -ишь, -ит, -им, -ите, -ят. The infinitive ending often hints at the group: -ать/-ять are usually first, -ить is usually second.',
       examples: [
         {
-          german: 'Я читаю книгу каждый день.',
+          russian: 'Я читаю книгу каждый день.',
           english: 'I read a book every day.',
           highlight: 'читаю',
         },
         {
-          german: 'Ты говоришь по-русски очень хорошо.',
+          russian: 'Ты говоришь по-русски очень хорошо.',
           english: 'You speak Russian very well.',
           highlight: 'говоришь',
         },
         {
-          german: 'Мы работаем в офисе.',
+          russian: 'Мы работаем в офисе.',
           english: 'We work in the office.',
           highlight: 'работаем',
         },
@@ -45,17 +45,17 @@ export const GRAMMAR_CURRICULUM: Record<CEFRLevel, GrammarTopicData[]> = {
         'In modern Russian, the verb быть (to be) is usually omitted in the present tense. Instead of "I am a student," Russians say "Я студент." The form есть is used to express existence or possession: "У меня есть..." (I have...). In the past and future, быть is used: был/была/было/были (past) and буду/будешь/будет (future).',
       examples: [
         {
-          german: 'Я студент.',
+          russian: 'Я студент.',
           english: 'I am a student.',
           highlight: 'Я студент',
         },
         {
-          german: 'У меня есть собака.',
+          russian: 'У меня есть собака.',
           english: 'I have a dog.',
           highlight: 'есть',
         },
         {
-          german: 'Она была дома вчера.',
+          russian: 'Она была дома вчера.',
           english: 'She was at home yesterday.',
           highlight: 'была',
         },
@@ -70,17 +70,17 @@ export const GRAMMAR_CURRICULUM: Record<CEFRLevel, GrammarTopicData[]> = {
         'The nominative case is the dictionary form of nouns. It answers the questions кто? (who?) and что? (what?) and marks the subject of a sentence. Masculine nouns end in a consonant or -й/-ь, feminine in -а/-я/-ь, neuter in -о/-е. The nominative is used after это (this is): "Это мой друг."',
       examples: [
         {
-          german: 'Это мой брат.',
+          russian: 'Это мой брат.',
           english: 'This is my brother.',
           highlight: 'брат',
         },
         {
-          german: 'Книга лежит на столе.',
+          russian: 'Книга лежит на столе.',
           english: 'The book is on the table.',
           highlight: 'Книга',
         },
         {
-          german: 'Дети играют во дворе.',
+          russian: 'Дети играют во дворе.',
           english: 'The children play in the yard.',
           highlight: 'Дети',
         },
@@ -95,17 +95,17 @@ export const GRAMMAR_CURRICULUM: Record<CEFRLevel, GrammarTopicData[]> = {
         'The accusative case marks the direct object — what is being acted upon. It answers кого? (whom?) and что? (what?). For inanimate masculine and all neuter nouns, the accusative equals the nominative. Feminine nouns change -а to -у and -я to -ю. Animate masculine nouns take the genitive form in the accusative.',
       examples: [
         {
-          german: 'Я читаю газету.',
+          russian: 'Я читаю газету.',
           english: 'I am reading a newspaper.',
           highlight: 'газету',
         },
         {
-          german: 'Он видит брата.',
+          russian: 'Он видит брата.',
           english: 'He sees his brother.',
           highlight: 'брата',
         },
         {
-          german: 'Мы покупаем хлеб.',
+          russian: 'Мы покупаем хлеб.',
           english: 'We are buying bread.',
           highlight: 'хлеб',
         },
@@ -120,17 +120,17 @@ export const GRAMMAR_CURRICULUM: Record<CEFRLevel, GrammarTopicData[]> = {
         'Russian has three genders: masculine (мужской род), feminine (женский род), and neuter (средний род). Gender is usually predictable from the ending: consonant or -й → masculine (стол, музей), -а/-я → feminine (книга, земля), -о/-е → neuter (окно, море). Nouns ending in -ь can be either masculine (день) or feminine (ночь) and must be memorized.',
       examples: [
         {
-          german: 'Стол большой.',
+          russian: 'Стол большой.',
           english: 'The table is big.',
           highlight: 'Стол',
         },
         {
-          german: 'Книга интересная.',
+          russian: 'Книга интересная.',
           english: 'The book is interesting.',
           highlight: 'Книга интересная',
         },
         {
-          german: 'Окно открыто.',
+          russian: 'Окно открыто.',
           english: 'The window is open.',
           highlight: 'Окно открыто',
         },
@@ -145,17 +145,17 @@ export const GRAMMAR_CURRICULUM: Record<CEFRLevel, GrammarTopicData[]> = {
         'Russian plurals are formed by changing the ending: masculine nouns usually add -ы or -и (стол → столы, учитель → учителя). Feminine nouns change -а to -ы and -я to -и (книга → книги). Neuter nouns change -о to -а and -е to -я (окно → окна, море → моря). Some nouns have irregular plurals: ребёнок → дети, человек → люди.',
       examples: [
         {
-          german: 'Книги лежат на полке.',
+          russian: 'Книги лежат на полке.',
           english: 'The books are on the shelf.',
           highlight: 'Книги',
         },
         {
-          german: 'У меня два брата.',
+          russian: 'У меня два брата.',
           english: 'I have two brothers.',
           highlight: 'брата',
         },
         {
-          german: 'Дома на этой улице старые.',
+          russian: 'Дома на этой улице старые.',
           english: 'The houses on this street are old.',
           highlight: 'Дома',
         },
@@ -170,17 +170,17 @@ export const GRAMMAR_CURRICULUM: Record<CEFRLevel, GrammarTopicData[]> = {
         'Russian word order is flexible but the default is Subject-Verb-Object. New or important information tends to come at the end of the sentence. Yes/no questions are formed simply by changing intonation — no word-order change is needed. Question words include кто (who), что (what), где (where), когда (when), почему (why), как (how).',
       examples: [
         {
-          german: 'Ты говоришь по-русски?',
+          russian: 'Ты говоришь по-русски?',
           english: 'Do you speak Russian?',
           highlight: 'Ты говоришь',
         },
         {
-          german: 'Где ты живёшь?',
+          russian: 'Где ты живёшь?',
           english: 'Where do you live?',
           highlight: 'Где',
         },
         {
-          german: 'Когда начинается урок?',
+          russian: 'Когда начинается урок?',
           english: 'When does the lesson start?',
           highlight: 'Когда',
         },
@@ -198,17 +198,17 @@ export const GRAMMAR_CURRICULUM: Record<CEFRLevel, GrammarTopicData[]> = {
         'The Russian past tense is formed from the infinitive stem plus -л (masculine), -ла (feminine), -ло (neuter), -ли (plural). It agrees with the subject in gender and number, not person: я/ты/он читал, я/ты/она читала, мы/вы/они читали. The auxiliary verb is not needed — just the -л form.',
       examples: [
         {
-          german: 'Я вчера читал книгу.',
+          russian: 'Я вчера читал книгу.',
           english: 'I read a book yesterday. (male speaker)',
           highlight: 'читал',
         },
         {
-          german: 'Она написала письмо.',
+          russian: 'Она написала письмо.',
           english: 'She wrote a letter.',
           highlight: 'написала',
         },
         {
-          german: 'Дети играли в парке.',
+          russian: 'Дети играли в парке.',
           english: 'The children played in the park.',
           highlight: 'играли',
         },
@@ -223,17 +223,17 @@ export const GRAMMAR_CURRICULUM: Record<CEFRLevel, GrammarTopicData[]> = {
         'Мочь (can) conjugates as могу, можешь, может, etc. and takes an infinitive. Хотеть (to want) is irregular: хочу, хочешь, хочет, хотим, хотите, хотят. Должен/должна/должно/должны (must) is a short adjective agreeing with the subject. Нужно/надо (need to) is impersonal and used with the dative: "Мне нужно работать."',
       examples: [
         {
-          german: 'Я могу помочь тебе.',
+          russian: 'Я могу помочь тебе.',
           english: 'I can help you.',
           highlight: 'могу',
         },
         {
-          german: 'Мне нужно идти домой.',
+          russian: 'Мне нужно идти домой.',
           english: 'I need to go home.',
           highlight: 'нужно',
         },
         {
-          german: 'Он должен позвонить маме.',
+          russian: 'Он должен позвонить маме.',
           english: 'He must call his mom.',
           highlight: 'должен',
         },
@@ -248,17 +248,17 @@ export const GRAMMAR_CURRICULUM: Record<CEFRLevel, GrammarTopicData[]> = {
         'The dative case answers кому? (to whom?) and чему? (to what?). Masculine and neuter nouns take -у/-ю (друг → другу, учитель → учителю). Feminine nouns change -а to -е and -я to -е (сестра → сестре). The dative is used with verbs like давать (give), помогать (help), звонить (call), and with impersonal constructions: мне холодно (I am cold).',
       examples: [
         {
-          german: 'Я дал книгу другу.',
+          russian: 'Я дал книгу другу.',
           english: 'I gave the book to a friend.',
           highlight: 'другу',
         },
         {
-          german: 'Мне нравится музыка.',
+          russian: 'Мне нравится музыка.',
           english: 'I like music. (lit. Music is pleasing to me.)',
           highlight: 'Мне',
         },
         {
-          german: 'Она помогает сестре.',
+          russian: 'Она помогает сестре.',
           english: 'She helps her sister.',
           highlight: 'сестре',
         },
@@ -273,17 +273,17 @@ export const GRAMMAR_CURRICULUM: Record<CEFRLevel, GrammarTopicData[]> = {
         'The prepositional case is always used with a preposition — most commonly в (in), на (on/at), and о (about). Masculine and neuter nouns take -е (в доме, в окне). Feminine nouns change -а to -е (в школе). Some masculine nouns take the stressed -у after в/на: в лесу, на полу. This case answers the question где? (where?) for location.',
       examples: [
         {
-          german: 'Я живу в Москве.',
+          russian: 'Я живу в Москве.',
           english: 'I live in Moscow.',
           highlight: 'в Москве',
         },
         {
-          german: 'Книга на столе.',
+          russian: 'Книга на столе.',
           english: 'The book is on the table.',
           highlight: 'на столе',
         },
         {
-          german: 'Мы говорим о фильме.',
+          russian: 'Мы говорим о фильме.',
           english: 'We are talking about a film.',
           highlight: 'о фильме',
         },
@@ -298,17 +298,17 @@ export const GRAMMAR_CURRICULUM: Record<CEFRLevel, GrammarTopicData[]> = {
         'Russian has two comparative forms. The simple comparative adds -ее/-ей to the adjective stem: красивый → красивее, быстрый → быстрее. Some are irregular: хороший → лучше, плохой → хуже, большой → больше, маленький → меньше. The compound comparative uses более + adjective: более интересный. "Than" is expressed with чем or the genitive case.',
       examples: [
         {
-          german: 'Москва больше Петербурга.',
+          russian: 'Москва больше Петербурга.',
           english: 'Moscow is bigger than Petersburg.',
           highlight: 'больше',
         },
         {
-          german: 'Эта книга интереснее той.',
+          russian: 'Эта книга интереснее той.',
           english: 'This book is more interesting than that one.',
           highlight: 'интереснее',
         },
         {
-          german: 'Он бегает быстрее, чем я.',
+          russian: 'Он бегает быстрее, чем я.',
           english: 'He runs faster than I do.',
           highlight: 'быстрее, чем',
         },
@@ -326,17 +326,17 @@ export const GRAMMAR_CURRICULUM: Record<CEFRLevel, GrammarTopicData[]> = {
         'Every Russian verb has an aspect. Imperfective verbs describe ongoing, repeated, or habitual actions (читать — to read/be reading). Perfective verbs describe completed, one-time actions with a result (прочитать — to finish reading). Aspect pairs are often formed with prefixes: писать → написать, делать → сделать. Choosing the right aspect is essential for natural Russian.',
       examples: [
         {
-          german: 'Я читал эту книгу целый месяц.',
+          russian: 'Я читал эту книгу целый месяц.',
           english: 'I was reading this book for a whole month. (process)',
           highlight: 'читал',
         },
         {
-          german: 'Я прочитал эту книгу за неделю.',
+          russian: 'Я прочитал эту книгу за неделю.',
           english: 'I finished reading this book in a week. (completed)',
           highlight: 'прочитал',
         },
         {
-          german: 'Каждый день она писала письма.',
+          russian: 'Каждый день она писала письма.',
           english: 'Every day she wrote letters. (habitual)',
           highlight: 'писала',
         },
@@ -351,17 +351,17 @@ export const GRAMMAR_CURRICULUM: Record<CEFRLevel, GrammarTopicData[]> = {
         'The genitive answers кого? (of whom?) and чего? (of what?). Masculine and neuter nouns take -а/-я (дом → дома, учитель → учителя). Feminine nouns change -а to -ы and -я to -и (книга → книги). The genitive is used after numbers 2-4 (два стола), after нет for absence (нет времени), after много/мало, and with some prepositions: из, от, до, без, для.',
       examples: [
         {
-          german: 'У меня нет времени.',
+          russian: 'У меня нет времени.',
           english: 'I don\'t have time.',
           highlight: 'времени',
         },
         {
-          german: 'Это книга моего брата.',
+          russian: 'Это книга моего брата.',
           english: 'This is my brother\'s book.',
           highlight: 'моего брата',
         },
         {
-          german: 'В комнате много студентов.',
+          russian: 'В комнате много студентов.',
           english: 'There are many students in the room.',
           highlight: 'студентов',
         },
@@ -376,17 +376,17 @@ export const GRAMMAR_CURRICULUM: Record<CEFRLevel, GrammarTopicData[]> = {
         'Russian relative clauses use который (who/which/that), which agrees in gender and number with the noun it refers to but takes its case from its role in the relative clause. "The book which I read" → "Книга, которую я читал" (которую is feminine accusative because книга is feminine and it is the object of читал).',
       examples: [
         {
-          german: 'Человек, который звонил, мой друг.',
+          russian: 'Человек, который звонил, мой друг.',
           english: 'The person who called is my friend.',
           highlight: 'который',
         },
         {
-          german: 'Фильм, который мы смотрели, был интересный.',
+          russian: 'Фильм, который мы смотрели, был интересный.',
           english: 'The film that we watched was interesting.',
           highlight: 'который',
         },
         {
-          german: 'Девушка, которой я помог, учится в университете.',
+          russian: 'Девушка, которой я помог, учится в университете.',
           english: 'The girl whom I helped studies at university.',
           highlight: 'которой',
         },
@@ -401,17 +401,17 @@ export const GRAMMAR_CURRICULUM: Record<CEFRLevel, GrammarTopicData[]> = {
         'The Russian conditional is formed with the past tense + the particle бы: "Я бы поехал" (I would go). For if-clauses, use если бы + past tense in both parts: "Если бы я знал, я бы пришёл" (If I had known, I would have come). Бы can also express polite requests: "Я хотел бы..." (I would like...). Russian does not distinguish between present and past unreal conditions.',
       examples: [
         {
-          german: 'Я бы помог тебе, но я занят.',
+          russian: 'Я бы помог тебе, но я занят.',
           english: 'I would help you, but I am busy.',
           highlight: 'бы помог',
         },
         {
-          german: 'Если бы я знал русский, я бы поехал в Россию.',
+          russian: 'Если бы я знал русский, я бы поехал в Россию.',
           english: 'If I knew Russian, I would go to Russia.',
           highlight: 'Если бы',
         },
         {
-          german: 'Я хотел бы чашку чая.',
+          russian: 'Я хотел бы чашку чая.',
           english: 'I would like a cup of tea.',
           highlight: 'хотел бы',
         },
@@ -426,17 +426,17 @@ export const GRAMMAR_CURRICULUM: Record<CEFRLevel, GrammarTopicData[]> = {
         'Russian reflexive verbs end in -ся (after consonants and -ь) or -сь (after vowels). They can express: true reflexive action (мыться — to wash oneself), reciprocal action (встречаться — to meet each other), passive meaning (дом строится — the house is being built), or verbs that simply require -ся with no reflexive meaning (бояться — to be afraid, нравиться — to be pleasing).',
       examples: [
         {
-          german: 'Я учусь в университете.',
+          russian: 'Я учусь в университете.',
           english: 'I study at university.',
           highlight: 'учусь',
         },
         {
-          german: 'Они встречаются каждую пятницу.',
+          russian: 'Они встречаются каждую пятницу.',
           english: 'They meet every Friday.',
           highlight: 'встречаются',
         },
         {
-          german: 'Дверь открылась сама.',
+          russian: 'Дверь открылась сама.',
           english: 'The door opened by itself.',
           highlight: 'открылась',
         },
@@ -451,17 +451,17 @@ export const GRAMMAR_CURRICULUM: Record<CEFRLevel, GrammarTopicData[]> = {
         'Key subordinating conjunctions: что (that), потому что (because), так как (since), чтобы (in order to / so that), хотя (although), пока (while), когда (when), если (if). After чтобы, use the past tense for different subjects: "Я хочу, чтобы он пришёл." Subordinate clauses are always separated by commas in Russian.',
       examples: [
         {
-          german: 'Я думаю, что он прав.',
+          russian: 'Я думаю, что он прав.',
           english: 'I think that he is right.',
           highlight: 'что',
         },
         {
-          german: 'Она учит русский, чтобы читать Толстого.',
+          russian: 'Она учит русский, чтобы читать Толстого.',
           english: 'She studies Russian in order to read Tolstoy.',
           highlight: 'чтобы',
         },
         {
-          german: 'Хотя было холодно, мы пошли гулять.',
+          russian: 'Хотя было холодно, мы пошли гулять.',
           english: 'Although it was cold, we went for a walk.',
           highlight: 'Хотя',
         },
@@ -479,17 +479,17 @@ export const GRAMMAR_CURRICULUM: Record<CEFRLevel, GrammarTopicData[]> = {
         'The instrumental case answers кем? (by whom?) and чем? (with what?). Masculine and neuter nouns take -ом/-ем (друг → другом, учитель → учителем). Feminine nouns take -ой/-ей (книга → книгой, земля → землёй). It is used: with с (with) — "с другом"; for instruments — "писать ручкой"; after быть/стать in the past/future — "Он стал врачом"; after prepositions за, между, над, под, перед.',
       examples: [
         {
-          german: 'Я пишу ручкой.',
+          russian: 'Я пишу ручкой.',
           english: 'I write with a pen.',
           highlight: 'ручкой',
         },
         {
-          german: 'Она стала врачом.',
+          russian: 'Она стала врачом.',
           english: 'She became a doctor.',
           highlight: 'врачом',
         },
         {
-          german: 'Мы гуляем с друзьями в парке.',
+          russian: 'Мы гуляем с друзьями в парке.',
           english: 'We walk with friends in the park.',
           highlight: 'с друзьями',
         },
@@ -504,17 +504,17 @@ export const GRAMMAR_CURRICULUM: Record<CEFRLevel, GrammarTopicData[]> = {
         'Russian has several passive constructions. Reflexive passive uses -ся with imperfective verbs: "Дом строится рабочими" (The house is being built by workers). Short passive participles are formed from perfective verbs: построен, написан, сделан — "Книга написана Толстым" (The book was written by Tolstoy). The agent is in the instrumental case.',
       examples: [
         {
-          german: 'Этот роман написан Достоевским.',
+          russian: 'Этот роман написан Достоевским.',
           english: 'This novel was written by Dostoevsky.',
           highlight: 'написан Достоевским',
         },
         {
-          german: 'Здесь строится новая школа.',
+          russian: 'Здесь строится новая школа.',
           english: 'A new school is being built here.',
           highlight: 'строится',
         },
         {
-          german: 'Задача решена.',
+          russian: 'Задача решена.',
           english: 'The problem is solved.',
           highlight: 'решена',
         },
@@ -529,17 +529,17 @@ export const GRAMMAR_CURRICULUM: Record<CEFRLevel, GrammarTopicData[]> = {
         'Russian has four types of participles: present active (-ущий/-ющий, -ащий/-ящий), past active (-вший/-ший), present passive (-емый/-имый), and past passive (-нный/-тый). Participles function as adjectives and agree with their noun in gender, number, and case. "Читающий мальчик" (the reading boy), "прочитанная книга" (the read book). They are characteristic of formal and written Russian.',
       examples: [
         {
-          german: 'Студент, читающий книгу, мой друг.',
+          russian: 'Студент, читающий книгу, мой друг.',
           english: 'The student reading a book is my friend.',
           highlight: 'читающий',
         },
         {
-          german: 'Построенный дом очень красивый.',
+          russian: 'Построенный дом очень красивый.',
           english: 'The built house is very beautiful.',
           highlight: 'Построенный',
         },
         {
-          german: 'Изучаемые темы очень важные.',
+          russian: 'Изучаемые темы очень важные.',
           english: 'The topics being studied are very important.',
           highlight: 'Изучаемые',
         },
@@ -554,17 +554,17 @@ export const GRAMMAR_CURRICULUM: Record<CEFRLevel, GrammarTopicData[]> = {
         'Деепричастия (verbal adverbs/gerunds) describe an action performed by the same subject as the main verb. Imperfective деепричастия end in -а/-я (читая — while reading) and express simultaneous action. Perfective ones end in -в/-вши/-ши (прочитав — having read) and express a prior action. The subject of both actions must be the same.',
       examples: [
         {
-          german: 'Читая книгу, она пила чай.',
+          russian: 'Читая книгу, она пила чай.',
           english: 'While reading a book, she drank tea.',
           highlight: 'Читая',
         },
         {
-          german: 'Закончив работу, он пошёл домой.',
+          russian: 'Закончив работу, он пошёл домой.',
           english: 'Having finished work, he went home.',
           highlight: 'Закончив',
         },
         {
-          german: 'Улыбаясь, она поздоровалась с нами.',
+          russian: 'Улыбаясь, она поздоровалась с нами.',
           english: 'Smiling, she greeted us.',
           highlight: 'Улыбаясь',
         },
@@ -579,17 +579,17 @@ export const GRAMMAR_CURRICULUM: Record<CEFRLevel, GrammarTopicData[]> = {
         'Advanced Russian uses layered clause structures: "Он сказал, что, если бы он знал, он бы пришёл" (He said that if he had known, he would have come). Key patterns include indirect speech (что + clause), purpose clauses (чтобы), concession (несмотря на то что), result (так что), and time clauses (после того как, до того как, прежде чем).',
       examples: [
         {
-          german: 'Несмотря на то что шёл дождь, мы пошли гулять.',
+          russian: 'Несмотря на то что шёл дождь, мы пошли гулять.',
           english: 'Despite the fact that it was raining, we went for a walk.',
           highlight: 'Несмотря на то что',
         },
         {
-          german: 'После того как он позвонил, мы поехали в аэропорт.',
+          russian: 'После того как он позвонил, мы поехали в аэропорт.',
           english: 'After he called, we went to the airport.',
           highlight: 'После того как',
         },
         {
-          german: 'Она так устала, что сразу уснула.',
+          russian: 'Она так устала, что сразу уснула.',
           english: 'She was so tired that she fell asleep immediately.',
           highlight: 'так ... что',
         },
@@ -607,17 +607,17 @@ export const GRAMMAR_CURRICULUM: Record<CEFRLevel, GrammarTopicData[]> = {
         'At C1, aspect choice conveys subtle meaning: imperfective in negated past can mean "didn\'t even try" (Я не открывал окно — I didn\'t open the window [didn\'t touch it]) vs. perfective negation meaning "tried but failed" or "result undone" (Я не открыл окно — I didn\'t manage to open it). Aspect also affects imperatives: imperfective commands are softer invitations (Садитесь!), while perfective commands are specific instructions (Сядьте на этот стул!).',
       examples: [
         {
-          german: 'Кто открывал окно? — Здесь холодно!',
+          russian: 'Кто открывал окно? — Здесь холодно!',
           english: 'Who opened the window? (and it may still be open)',
           highlight: 'открывал',
         },
         {
-          german: 'Садитесь, пожалуйста!',
+          russian: 'Садитесь, пожалуйста!',
           english: 'Please sit down! (general polite invitation)',
           highlight: 'Садитесь',
         },
         {
-          german: 'Я вам звонил вчера, но не дозвонился.',
+          russian: 'Я вам звонил вчера, но не дозвонился.',
           english: 'I was calling you yesterday but couldn\'t get through.',
           highlight: 'звонил ... не дозвонился',
         },
@@ -632,17 +632,17 @@ export const GRAMMAR_CURRICULUM: Record<CEFRLevel, GrammarTopicData[]> = {
         'In literary and academic Russian, participial phrases replace relative clauses for a more elevated style. "Студент, который читает книгу" becomes "Студент, читающий книгу" or, with a pre-positioned phrase, "Читающий книгу студент." These constructions can be quite long and are a hallmark of Russian academic and journalistic writing.',
       examples: [
         {
-          german: 'Написанная известным автором книга стала бестселлером.',
+          russian: 'Написанная известным автором книга стала бестселлером.',
           english: 'The book written by a famous author became a bestseller.',
           highlight: 'Написанная известным автором',
         },
         {
-          german: 'Проживающие за границей граждане должны зарегистрироваться.',
+          russian: 'Проживающие за границей граждане должны зарегистрироваться.',
           english: 'Citizens residing abroad must register.',
           highlight: 'Проживающие за границей',
         },
         {
-          german: 'Вопрос, рассматриваемый комиссией, очень сложный.',
+          russian: 'Вопрос, рассматриваемый комиссией, очень сложный.',
           english: 'The question being considered by the commission is very complex.',
           highlight: 'рассматриваемый комиссией',
         },
@@ -657,17 +657,17 @@ export const GRAMMAR_CURRICULUM: Record<CEFRLevel, GrammarTopicData[]> = {
         'Russian\'s flexible word order allows stylistic inversion for emphasis, contrast, and emotional coloring. Placing the rheme (new information) at the end is neutral; fronting it creates emphasis: "Книгу я уже прочитал" (The BOOK I\'ve already read). In literary Russian, inverted order creates poetic or dramatic effect: "Прекрасна была та ночь" (Beautiful was that night).',
       examples: [
         {
-          german: 'Книгу эту я уже прочитал.',
+          russian: 'Книгу эту я уже прочитал.',
           english: 'THIS book I have already read.',
           highlight: 'Книгу эту',
         },
         {
-          german: 'Странный это был человек.',
+          russian: 'Странный это был человек.',
           english: 'A strange man he was.',
           highlight: 'Странный это был',
         },
         {
-          german: 'Пришла зима.',
+          russian: 'Пришла зима.',
           english: 'Winter came. (literary/dramatic)',
           highlight: 'Пришла зима',
         },
@@ -682,17 +682,17 @@ export const GRAMMAR_CURRICULUM: Record<CEFRLevel, GrammarTopicData[]> = {
         'Native-level Russian uses discourse markers to structure speech and text: итак (so then), таким образом (thus), кстати (by the way), впрочем (however/actually), дело в том, что (the thing is that), иными словами (in other words), с одной стороны ... с другой стороны (on the one hand ... on the other hand). Conversational fillers include ну (well), вот (so/here), значит (I mean/so).',
       examples: [
         {
-          german: 'Итак, давайте подведём итоги.',
+          russian: 'Итак, давайте подведём итоги.',
           english: 'So then, let\'s summarize.',
           highlight: 'Итак',
         },
         {
-          german: 'Кстати, ты видел новый фильм?',
+          russian: 'Кстати, ты видел новый фильм?',
           english: 'By the way, have you seen the new film?',
           highlight: 'Кстати',
         },
         {
-          german: 'Дело в том, что у нас нет времени.',
+          russian: 'Дело в том, что у нас нет времени.',
           english: 'The thing is, we don\'t have time.',
           highlight: 'Дело в том, что',
         },
@@ -707,17 +707,17 @@ export const GRAMMAR_CURRICULUM: Record<CEFRLevel, GrammarTopicData[]> = {
         'Russian register ranges from highly formal (academic, bureaucratic) to colloquial and slang. The ты/вы distinction is central: вы for strangers, elders, and formal contexts; ты for friends, family, and children. Formal Russian uses full forms (сейчас, потому что), while colloquial speech has reductions (щас, потому что → потому шо). Переход на "ты" (switching to ты) is a social milestone in relationships.',
       examples: [
         {
-          german: 'Вы не могли бы мне помочь?',
+          russian: 'Вы не могли бы мне помочь?',
           english: 'Could you help me? (formal/polite)',
           highlight: 'Вы не могли бы',
         },
         {
-          german: 'Слушай, можешь помочь?',
+          russian: 'Слушай, можешь помочь?',
           english: 'Hey, can you help? (informal)',
           highlight: 'Слушай, можешь',
         },
         {
-          german: 'Давайте перейдём на "ты".',
+          russian: 'Давайте перейдём на "ты".',
           english: 'Let\'s switch to informal "you."',
           highlight: 'перейдём на "ты"',
         },
@@ -735,17 +735,17 @@ export const GRAMMAR_CURRICULUM: Record<CEFRLevel, GrammarTopicData[]> = {
         'Literary Russian (литературный язык) encompasses the elevated register found in fiction, poetry, and formal prose. It features archaic verb forms (молвить — to utter), Church Slavonic vocabulary (очи — eyes, уста — lips, глас — voice), complex participial constructions, and rhetorical devices. Understanding Pushkin, Tolstoy, and Dostoevsky requires familiarity with 19th-century vocabulary and syntax that differs from modern spoken Russian.',
       examples: [
         {
-          german: 'Я помню чудное мгновенье: передо мной явилась ты.',
+          russian: 'Я помню чудное мгновенье: передо мной явилась ты.',
           english: 'I remember a wondrous moment: you appeared before me. (Pushkin)',
           highlight: 'чудное мгновенье',
         },
         {
-          german: 'Все счастливые семьи похожи друг на друга.',
+          russian: 'Все счастливые семьи похожи друг на друга.',
           english: 'All happy families are alike. (Tolstoy)',
           highlight: 'похожи друг на друга',
         },
         {
-          german: 'Красота спасёт мир.',
+          russian: 'Красота спасёт мир.',
           english: 'Beauty will save the world. (Dostoevsky)',
           highlight: 'спасёт',
         },
@@ -760,17 +760,17 @@ export const GRAMMAR_CURRICULUM: Record<CEFRLevel, GrammarTopicData[]> = {
         'Church Slavonic deeply shaped Russian vocabulary and style. Many doublets exist: native Russian ворота (gates) vs. Church Slavonic врата; город (city) vs. град; голова (head) vs. глава (chapter/head of state); золото (gold) vs. злато (poetic). Church Slavonic forms are perceived as elevated or archaic. The prefix пре- (very/exceedingly) and суффикс -ствие are Church Slavonic markers. Recognizing these layers enriches understanding of register and etymology.',
       examples: [
         {
-          german: 'Глава государства выступил с речью.',
+          russian: 'Глава государства выступил с речью.',
           english: 'The head of state gave a speech.',
           highlight: 'Глава',
         },
         {
-          german: 'Врата храма были открыты.',
+          russian: 'Врата храма были открыты.',
           english: 'The gates of the temple were open. (elevated)',
           highlight: 'Врата',
         },
         {
-          german: 'Здравствуйте — древнее приветствие.',
+          russian: 'Здравствуйте — древнее приветствие.',
           english: '"Zdravstvuyte" is an ancient greeting. (from "здравие" — health)',
           highlight: 'Здравствуйте',
         },
@@ -785,17 +785,17 @@ export const GRAMMAR_CURRICULUM: Record<CEFRLevel, GrammarTopicData[]> = {
         'Despite being more uniform than many languages, Russian has notable regional variation. Northern dialects (Vologda, Arkhangelsk) preserve оканье — pronouncing unstressed "о" as [o] rather than reducing it to [a]. Southern dialects (Ryazan, Kursk) have яканье and fricative [ɣ] instead of [g]. Moscow speech (аканье) became the literary standard. Regional vocabulary also varies: подъезд vs. парадная (entrance), батон vs. булка (loaf).',
       examples: [
         {
-          german: 'В Петербурге говорят "парадная", а в Москве — "подъезд".',
+          russian: 'В Петербурге говорят "парадная", а в Москве — "подъезд".',
           english: 'In Petersburg they say "paradnaya," but in Moscow — "podyezd." (entrance)',
           highlight: 'парадная ... подъезд',
         },
         {
-          german: 'На севере России сохраняется оканье.',
+          russian: 'На севере России сохраняется оканье.',
           english: 'In northern Russia, okanye (full pronunciation of "o") is preserved.',
           highlight: 'оканье',
         },
         {
-          german: 'Бабушка говорила "чаво" вместо "чего".',
+          russian: 'Бабушка говорила "чаво" вместо "чего".',
           english: 'Grandma said "chavo" instead of "chego." (dialectal)',
           highlight: 'чаво',
         },
@@ -810,17 +810,17 @@ export const GRAMMAR_CURRICULUM: Record<CEFRLevel, GrammarTopicData[]> = {
         'Mastery of Russian cases includes idiomatic expressions where case usage is unpredictable: "что за + nominative" (what kind of), "от нечего делать" (genitive, out of boredom), "рука об руку" (accusative, hand in hand), "с глазу на глаз" (face to face). Verbs governing unexpected cases must be memorized: управлять + instrumental (to manage), избегать + genitive (to avoid), завидовать + dative (to envy).',
       examples: [
         {
-          german: 'Что за вопрос!',
+          russian: 'Что за вопрос!',
           english: 'What kind of question is that!',
           highlight: 'Что за',
         },
         {
-          german: 'Он руководит компанией уже десять лет.',
+          russian: 'Он руководит компанией уже десять лет.',
           english: 'He has been managing the company for ten years. (instrumental)',
           highlight: 'компанией',
         },
         {
-          german: 'Нам не по пути.',
+          russian: 'Нам не по пути.',
           english: 'We\'re not going the same way. (idiomatic dative)',
           highlight: 'не по пути',
         },

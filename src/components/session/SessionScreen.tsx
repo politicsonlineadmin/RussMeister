@@ -1090,7 +1090,7 @@ function getSampleWarmup(domainKey: string): Exercise[] {
         level: 'A1',
         instruction: 'What does this word mean?',
         content: {
-          word: 'der Ball',
+          word: 'мяч',
           options: ['the ball', 'the game', 'the player', 'the field'],
           correct_index: 0,
         } as VocabQuizContent,
@@ -1101,7 +1101,7 @@ function getSampleWarmup(domainKey: string): Exercise[] {
         level: 'A1',
         instruction: 'What does this word mean?',
         content: {
-          word: 'das Tor',
+          word: 'ворота',
           options: ['the door', 'the goal', 'the wall', 'the net'],
           correct_index: 1,
         } as VocabQuizContent,
@@ -1112,7 +1112,7 @@ function getSampleWarmup(domainKey: string): Exercise[] {
         level: 'A1',
         instruction: 'What does this word mean?',
         content: {
-          word: 'die Mannschaft',
+          word: 'команда',
           options: ['the man', 'the match', 'the team', 'the stadium'],
           correct_index: 2,
         } as VocabQuizContent,
@@ -1123,7 +1123,7 @@ function getSampleWarmup(domainKey: string): Exercise[] {
         level: 'A1',
         instruction: 'What does this word mean?',
         content: {
-          word: 'der Spieler',
+          word: 'игрок',
           options: ['the game', 'the mirror', 'the coach', 'the player'],
           correct_index: 3,
         } as VocabQuizContent,
@@ -1134,7 +1134,7 @@ function getSampleWarmup(domainKey: string): Exercise[] {
         level: 'A1',
         instruction: 'What does this word mean?',
         content: {
-          word: 'spielen',
+          word: 'играть',
           options: ['to speak', 'to play', 'to sleep', 'to eat'],
           correct_index: 1,
         } as VocabQuizContent,
@@ -1148,7 +1148,7 @@ function getSampleWarmup(domainKey: string): Exercise[] {
       level: 'A1',
       instruction: 'What does this word mean?',
       content: {
-        word: 'das Haus',
+        word: 'дом',
         options: ['the house', 'the mouse', 'the car', 'the tree'],
         correct_index: 0,
       } as VocabQuizContent,
@@ -1159,7 +1159,7 @@ function getSampleWarmup(domainKey: string): Exercise[] {
       level: 'A1',
       instruction: 'What does this word mean?',
       content: {
-        word: 'die Katze',
+        word: 'кошка',
         options: ['the dog', 'the cat', 'the bird', 'the fish'],
         correct_index: 1,
       } as VocabQuizContent,
@@ -1170,7 +1170,7 @@ function getSampleWarmup(domainKey: string): Exercise[] {
       level: 'A1',
       instruction: 'What does this word mean?',
       content: {
-        word: 'gut',
+        word: 'хорошо',
         options: ['bad', 'fast', 'good', 'old'],
         correct_index: 2,
       } as VocabQuizContent,
@@ -1181,7 +1181,7 @@ function getSampleWarmup(domainKey: string): Exercise[] {
       level: 'A1',
       instruction: 'What does this word mean?',
       content: {
-        word: 'trinken',
+        word: 'пить',
         options: ['to think', 'to eat', 'to sleep', 'to drink'],
         correct_index: 3,
       } as VocabQuizContent,
@@ -1192,7 +1192,7 @@ function getSampleWarmup(domainKey: string): Exercise[] {
       level: 'A1',
       instruction: 'What does this word mean?',
       content: {
-        word: 'lernen',
+        word: 'учить',
         options: ['to learn', 'to run', 'to read', 'to write'],
         correct_index: 0,
       } as VocabQuizContent,
