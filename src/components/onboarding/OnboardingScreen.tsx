@@ -121,6 +121,7 @@ export default function OnboardingScreen({ onComplete }: OnboardingScreenProps) 
       grammar_points_covered: [],
       weak_areas: [],
       strong_areas: [],
+      alphabet_mastered: false,
       created_at: now,
       updated_at: now,
     };

@@ -29,6 +29,7 @@ export interface LearnerProfile {
   weak_areas: SkillType[];
   strong_areas: SkillType[];
   created_at: string;
+  alphabet_mastered: boolean;
   updated_at: string;
 }
 
@@ -206,7 +207,7 @@ export interface LevelAssessment {
 }
 
 // ─── App State ─────────────────────────────────────────────────
-export type AppScreen = 'onboarding' | 'assessment' | 'dashboard' | 'session' | 'vocabulary' | 'grammar' | 'progress';
+export type AppScreen = 'onboarding' | 'assessment' | 'alphabet' | 'dashboard' | 'session' | 'vocabulary' | 'grammar' | 'progress';
 
 export interface AppState {
   currentScreen: AppScreen;

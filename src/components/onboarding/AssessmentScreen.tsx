@@ -348,12 +348,15 @@ export default function AssessmentScreen({ profile, onComplete }: AssessmentScre
     }
 
     const now = new Date().toISOString();
+    // Skip alphabet stage for B1+ learners (they already know Cyrillic)
+    const alphabetMastered = CEFR_ORDER.indexOf(assessedLevel) >= CEFR_ORDER.indexOf('B1');
     const updatedProfile: LearnerProfile = {
       ...profile,
       assessed_level: assessedLevel,
       skill_breakdown: skillBreakdown,
       weak_areas: weak,
       strong_areas: strong,
+      alphabet_mastered: alphabetMastered,
       updated_at: now,
     };
 

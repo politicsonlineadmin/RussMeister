@@ -10,6 +10,7 @@ import SessionScreen from '@/components/session/SessionScreen';
 import VocabularyScreen from '@/components/vocabulary/VocabularyScreen';
 import GrammarScreen from '@/components/grammar/GrammarScreen';
 import ProgressScreen from '@/components/progress/ProgressScreen';
+import AlphabetScreen from '@/components/alphabet/AlphabetScreen';
 
 const STORAGE_KEY = 'russmeister_profile';
 
@@ -24,7 +25,11 @@ export default function Home() {
       try {
         const parsed = JSON.parse(stored) as LearnerProfile;
         setProfile(parsed);
-        setScreen('dashboard');
+        if (parsed.alphabet_mastered === false) {
+          setScreen('alphabet');
+        } else {
+          setScreen('dashboard');
+        }
       } catch {
         // Corrupted data — start fresh
         localStorage.removeItem(STORAGE_KEY);
@@ -42,7 +47,20 @@ export default function Home() {
   const handleAssessmentComplete = (updatedProfile: LearnerProfile) => {
     setProfile(updatedProfile);
     localStorage.setItem(STORAGE_KEY, JSON.stringify(updatedProfile));
-    setScreen('dashboard');
+    if (!updatedProfile.alphabet_mastered) {
+      setScreen('alphabet');
+    } else {
+      setScreen('dashboard');
+    }
+  };
+
+  const handleAlphabetComplete = () => {
+    if (profile) {
+      const updatedProfile = { ...profile, alphabet_mastered: true, updated_at: new Date().toISOString() };
+      setProfile(updatedProfile);
+      localStorage.setItem(STORAGE_KEY, JSON.stringify(updatedProfile));
+      setScreen('dashboard');
+    }
   };
 
   const handleProfileUpdate = (updatedProfile: LearnerProfile) => {
@@ -64,7 +82,7 @@ export default function Home() {
     );
   }
 
-  const showNav = profile && screen !== 'onboarding' && screen !== 'assessment';
+  const showNav = profile && screen !== 'onboarding' && screen !== 'assessment' && screen !== 'alphabet';
 
   return (
     <div className="min-h-screen bg-[#f8ffff] text-[#3d6b6b]">
@@ -80,6 +98,9 @@ export default function Home() {
             profile={profile}
             onComplete={handleAssessmentComplete}
           />
+        )}
+        {screen === 'alphabet' && profile && (
+          <AlphabetScreen onComplete={handleAlphabetComplete} />
         )}
         {screen === 'dashboard' && profile && (
           <DashboardScreen

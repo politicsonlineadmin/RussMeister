@@ -248,6 +248,15 @@ export default function DashboardScreen({
                   {profile.interest_domain}
                 </span>
               )}
+              {/* Cyrillic Alphabet mastery badge */}
+              {profile.alphabet_mastered && (
+                <span className="inline-flex items-center gap-1 text-xs px-3 py-1 rounded-full bg-[#E8F8EE] text-[#27AE60] font-medium">
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round">
+                    <polyline points="20 6 9 17 4 12" />
+                  </svg>
+                  Cyrillic
+                </span>
+              )}
             </div>
           </div>
         </motion.div>
