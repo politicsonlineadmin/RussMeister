@@ -115,7 +115,7 @@ async function handleGenerateExercise(payload: {
 - Interest Domain: ${sanitizeString(domain)}
 - Exercise Type: ${exercise_type}${grammarClause}
 
-${cefrToNumber(level) >= cefrToNumber('B2') ? 'Include a Russian-language instruction (instruction_de) since the learner is at B2+.' : ''}
+${cefrToNumber(level) >= cefrToNumber('B2') ? 'Include a Russian-language instruction (instruction_ru) since the learner is at B2+.' : ''}
 
 Respond with ONLY a JSON object matching this TypeScript interface:
 {
@@ -123,7 +123,7 @@ Respond with ONLY a JSON object matching this TypeScript interface:
   "type": "${exercise_type}",
   "level": "${level}",
   "instruction": string (clear instruction in English),
-  "instruction_de": string | undefined (Russian instruction for B2+),
+  "instruction_ru": string | undefined (Russian instruction for B2+),
   "content": object (matching the content type for ${exercise_type}),
   "correct_answer": string | undefined,
   "hints": string[] | undefined (1-3 helpful hints)
@@ -137,7 +137,7 @@ For exercise type "${exercise_type}", the content object must match the appropri
 - listening_comprehension: { text_to_speak: string, questions: [{ question: string, options: string[], correct_index: number }] }
 - speaking_task: { target_phrase: string, context: string }
 - writing_task: { prompt: string, min_sentences: number, vocabulary_to_use?: string[], grammar_focus?: string }
-- translation: { source: string, source_language: "en" | "de", correct_translation: string }
+- translation: { source: string, source_language: "en" | "ru", correct_translation: string }
 - conjugation: { sentence: string (use ___ for blank), options: string[], correct_answer: string }
 
 Return ONLY valid JSON, no additional text.`;

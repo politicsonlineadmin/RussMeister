@@ -34,7 +34,7 @@ export interface LearnerProfile {
 }
 
 // ─── Vocabulary ────────────────────────────────────────────────
-export type PartOfSpeech = 'noun' | 'verb' | 'adjective' | 'adverb' | 'preposition' | 'conjunction' | 'pronoun' | 'article' | 'interjection';
+export type PartOfSpeech = 'noun' | 'verb' | 'adjective' | 'adverb' | 'preposition' | 'conjunction' | 'pronoun' | 'numeral' | 'particle' | 'interjection';
 export type Gender = 'masculine' | 'feminine' | 'neuter' | 'none';
 
 export interface VocabularyItem {
